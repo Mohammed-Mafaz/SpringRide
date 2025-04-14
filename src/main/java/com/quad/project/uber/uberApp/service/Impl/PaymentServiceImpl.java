@@ -20,7 +20,7 @@ public class PaymentServiceImpl implements PaymentService {
     @Override
     public void processPayment(Ride ride) {
         // two ways to process the payment , CASH or WALLET
-        // chose this by paymentMethod which is present in Payment and which was got from Ride.
+        // choose this by paymentMethod which is present in Payment and which was got from Ride.
         Payment payment = paymentRepository.findByRide(ride)
                 .orElseThrow(() -> new ResourceNotFoundException("Payment not found for ride with id : " + ride.getId()));
         paymentStrategyManager.paymentStrategy(payment.getPaymentMethod()).processPayment(payment);

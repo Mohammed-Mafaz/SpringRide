@@ -126,7 +126,7 @@ INSERT INTO rider (user_id, rating) VALUES
 
 INSERT INTO wallet (user_id, balance) VALUES
 (1, 300),
-(2,10
+(2,10);
 
 INSERT INTO driver (user_id, rating, available, current_location) VALUES
 ( 2, 4.7, true, ST_GeomFromText('POINT(77.1025 28.7041)', 4326)),

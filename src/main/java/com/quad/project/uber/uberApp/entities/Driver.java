@@ -33,5 +33,5 @@ public class Driver {
     private String vehicleId;
 
     @Column(columnDefinition = "Geometry(Point, 4326)") // for Earth lat & log
-    Point currentLocation;
+    private Point currentLocation;
 }
